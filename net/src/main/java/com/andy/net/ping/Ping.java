@@ -1,6 +1,8 @@
-package com.andy.net;
+package com.andy.net.ping;
 
 import android.util.Log;
+
+import com.andy.net.Constant;
 
 import java.io.BufferedReader;
 import java.io.IOException;

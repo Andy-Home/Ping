@@ -1,5 +1,7 @@
 package com.andy.net;
 
+import com.andy.net.ping.Ping;
+
 import org.junit.Test;
 
 import static org.junit.Assert.assertNotSame;
