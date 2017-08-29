@@ -1,4 +1,4 @@
-package com.andy.ping;
+package com.andy.net;
 
 import android.util.Log;
 

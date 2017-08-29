@@ -1,4 +1,4 @@
-package com.andy.ping;
+package com.andy.net;
 
 /**
  * 定义常量,以及常量初始化
