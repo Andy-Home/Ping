@@ -43,7 +43,7 @@ public class Ping {
         BufferedReader in = null;
         StringBuilder strBuffer = new StringBuilder();
         try {
-            from = new InputStreamReader(p.getInputStream(), "UTF-8");
+            from = new InputStreamReader(p.getInputStream(), Constant.getInstance().getStreamEncode());  //Android默认的字符编码格式为UTF-8
             in = new BufferedReader(from);
             String temp;
 
