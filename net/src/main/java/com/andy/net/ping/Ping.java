@@ -18,7 +18,7 @@ public class Ping {
     private static final String TAG = "Ping";
     private static Runtime mRuntime = Runtime.getRuntime();
 
-    public static String ping(String ip) {
+    static String ping(String ip) {
         String result = null;
         try {
             Process p;
