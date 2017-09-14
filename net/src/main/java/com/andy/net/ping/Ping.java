@@ -19,14 +19,21 @@ public class Ping {
     private static Runtime mRuntime = Runtime.getRuntime();
 
     static String ping(String ip) {
+        if (ip == null) {
+            Log.e(TAG, "参数为null");
+            return null;
+        }
         String result = null;
         try {
             Process p;
+            String command;
             if (Constant.getInstance().isLinux()) {
-                p = mRuntime.exec("ping -c 4 " + ip);
+                command = "ping -c 4 " + ip;
             } else {
-                p = mRuntime.exec("cmd /c ping " + ip);
+                command = "cmd /c ping " + ip;
             }
+            Log.i(TAG, "执行命令：" + command);
+            p = mRuntime.exec(command);
             result = streamToString(p);
         } catch (IOException e) {
             e.printStackTrace();

@@ -24,6 +24,9 @@ public class PingManager {
 
     public boolean isConnect(String ip) {
         String msg = Ping.ping(ip);
+        if (msg == null) {
+            return false;
+        }
         msg = msg.toLowerCase();
         if (msg.contains("ttl")) {
             return true;
